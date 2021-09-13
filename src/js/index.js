@@ -10,16 +10,21 @@ import "../styles/index.scss";
 
 //import your own components
 import Home from "./component/home.jsx";
+import { Button } from "bootstrap";
 
 //render your react application
 let contador = [0, 0, 0, 0, 0, 0];
-
-let indice1 = [5, 4, 3, 2, 1, 0];
-let columnas = 0;
+const resetear = () => {
+	contador = [0, 0, 0, 0, 0, 0];
+	return contador;
+};
 
 setInterval(function() {
 	ReactDOM.render(
-		<Home contador={contador} />,
+		<div className="contenedor">
+			<Home contador={contador} />
+			<button onClick={resetear}>Pulse para Resetear</button>
+		</div>,
 		document.querySelector("#app")
 	);
 	contador[5]++;

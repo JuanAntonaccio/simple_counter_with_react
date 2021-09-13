@@ -7,15 +7,17 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const Home = props => {
 	return (
-		<h1>
-			<i className="far fa-clock"></i>
-			{props.contador[0]}
-			{props.contador[1]}
-			{props.contador[2]}
-			{props.contador[3]}
-			{props.contador[4]}
-			{props.contador[5]}
-		</h1>
+		<div className="otro">
+			<div className="reloj">
+				<i className="far fa-clock"></i>
+			</div>
+			<div className="cajas">{props.contador[0]}</div>
+			<div className="cajas">{props.contador[1]}</div>
+			<div className="cajas">{props.contador[2]}</div>
+			<div className="cajas">{props.contador[3]}</div>
+			<div className="cajas">{props.contador[4]}</div>
+			<div className="cajas">{props.contador[5]}</div>
+		</div>
 	);
 };
 
